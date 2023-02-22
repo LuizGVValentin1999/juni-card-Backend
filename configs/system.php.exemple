@@ -1,0 +1,29 @@
+<?php
+class system {
+
+    public $_url_web = ""; // Caminho da base do sistema 
+
+    //Banco de dados inicio     
+    
+    private $host = ""; //host do banco de dados 
+    private $db_user = ""; //usuario do banco de dados 
+    private $db_password = ""; //senha do banco de dados 
+    private $db = ""; //base banco de dados 
+    
+    //conexão base de banco de dados 
+    public $con = [];
+    //Banco de dados fim // 
+
+    function __construct($host = null, $db_user = null, $db_password = null, $db = null) { 
+        
+        $host = $host??$this->host;
+        $db_user = $db_user??$this->db_user;
+        $db_password = $db_password??$this->db_password;
+        $db = $db??$this->db;
+
+        $this->con = mysqli_connect($host,$db_user,$db_password,$db) or die ('NAO FOI POSSIVEL');
+    }
+}
+
+
+

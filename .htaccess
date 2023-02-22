@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule (.*)$ index.php?url=$1 [L,QSA]
+# Ativa o cache
+<FilesMatch "\.(?i:ico|gif|jpe?g|png|css|js|svg)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+
+    FileETag None
+</FilesMatch>
