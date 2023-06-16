@@ -14,8 +14,8 @@
           header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
   
       exit(0);
-  }
-
+  }  
+ 
 
 // incluindo as configurações de sistema.
 include('configs/system.php');
