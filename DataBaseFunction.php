@@ -14,10 +14,6 @@ class dataBase {
         
         if( !empty($tabela) )
             $this->table = $tabela;
-        
-        
-
-       
     }
 
     //get a conexão para utilizar funções do mysqli 
